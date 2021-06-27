@@ -1,0 +1,120 @@
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+header {
+    overflow: hidden;
+    color: $white;
+    height: 532px;
+    background: linear-gradient(276.77deg, #FF505B 35.78%, rgba(255, 80, 91, 0.581567) 100.37%, rgba(255, 80, 91, 0) 100.77%);
+    border-radius: 0px 0px 0px 80px;
+    .header-text {
+        @include respond(mobile) {
+            padding-top: 2rem;
+        }
+    }
+}
+
+section {
+    max-width: 885px;
+    .split {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include respond(mobile) {
+            justify-content: center;
+        }
+        .card-horizontal {
+            @include respond(tablet) {
+                width: 320px;
+                height: 220px;
+            }
+            
+        }
+        .card-vertical {
+            width: 288px;
+		    height: 432px;
+
+            @include respond(mobile) {
+                padding: 40px 24px;
+            }
+        }
+    }
+    .split > * {
+        max-width: 400px;
+
+        @include respond(mobile) {
+            min-width: 360px;
+        }
+
+        @include respond(tablet) {
+            max-width: 360px;
+        }
+    }
+}
+
+.section-bg-dark {
+    height: 355px;
+	background: $blueColor;
+	border-radius: 0px 90px;
+
+    @include respond(mobile) {
+        height: 440px;
+    }
+
+    p {
+        max-width: 600px;
+
+        @include respond(mobile) {
+            max-width: 360px;
+        }
+    }
+}
+
+.orb1 {
+    width: 630px;
+    height: 630px;
+    border-radius: 50%;
+    position: absolute;
+    top: 680px;
+    right: 260px;
+    z-index: -100;
+    border: 1px solid #c4c4c4;  
+    overflow: hidden; 
+
+    @include respond(mobile) {
+        display: none;
+    }
+
+    @include respond(tablet) {
+        width: 430px;
+        height: 430px;
+        top: 730px;
+        right: 20px;
+    }
+}
+
+.orb2 {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    position: absolute;
+    top: 1820px;
+    left: 350px;
+    z-index: -100;
+    border: 1px solid #c4c4c4;   
+    overflow: hidden;
+
+    @include respond(mobile) {
+        display: none;
+    }
+
+    @include respond(tablet) {
+        width: 430px;
+        height: 430px;
+        top: 1880px;
+        left: 40px;
+    }
+}

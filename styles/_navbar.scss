@@ -1,0 +1,114 @@
+// .navbar {
+//     max-width: 80%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+
+//     @include respond(mobile) {
+//         visibility: hidden;
+//     }
+// }
+// .navbar-left {
+//     ul {
+//         min-width: 400px;
+
+//         @include respond(tablet) {
+//             min-width: 350px;
+//         }
+//     }
+// }
+
+// .mobile-nav-btn {
+//     font-size: 40px;
+//     text-align: center;
+//     padding-top: 30px;
+//     transition: all 0.2s;
+//     cursor: pointer;
+
+//     @include respond(desktop) {
+//         display: none;
+//     }
+
+//     @include respond(tablet) {
+       
+//     }
+
+//     @include respond(mobile) {
+//         display: block;
+        
+//     }
+
+//     &:hover {
+//         transform: scale(1.2);
+//     }
+// }
+
+nav {
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+nav .mainMenu li a {
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all .2s;
+}
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+nav .mainMenu .closeMenu , .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    transition: all .2s;
+}
+.fa-facebook:hover {color: $primaryOrange;}
+.fa-twitter:hover {color: $primaryOrange;}
+.fa-instagram:hover {color: $primaryOrange;}
+
+@media(max-width: 800px){
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: $blueColor;
+        transition: top .8s ease;
+        display: none;
+    }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+    }
+    nav .openMenu {
+        display: block;
+    }
+    nav .mainMenu li a:hover {
+        background: none;
+        color: $primaryOrange;
+        font-size: 1.1rem;
+    }
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+}
+

@@ -1,0 +1,117 @@
+$primaryOrange: #DE2727;
+$white: #ffffff;
+$blueColor: #1F363D;
+$greyText: #6A6A6A;
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+.grey {
+    color: $greyText;
+}
+.blue {
+    color: $blueColor;
+}
+.white {
+    color: $white;
+}
+.font-bold {
+    font-weight: 600;
+}
+.font-large {
+    font-size: 3rem;
+    @include respond(mobile) {
+        font-size: 2.5rem;
+    }
+}
+.font-medium {
+    font-size: 2rem;
+    @include respond(mobile) {
+        font-size: 1.6rem;
+    }
+}
+.font-small {
+    font-size: 1.5rem;
+    @include respond(mobile) {
+        font-size: 1.2rem;
+    }
+}
+.justify {
+    text-align: justify;
+}
+.pt-6 {
+    padding-top: 6.8rem;
+    @include respond(mobile) {
+        padding-top: 5.2rem;
+    }
+}
+.pt-4 {
+    padding-top: 4rem;
+    @include respond(mobile) {
+        padding-top: 3.6rem;
+    }
+}
+.pt-2 {
+    padding-top: 2.5rem;
+    @include respond(mobile) {
+        padding-top: 2rem;
+    }
+}
+.pt-1 {
+    padding-top: 1.5rem;
+}
+.mobile-padding {
+    @include respond(mobile) {
+        padding: 2.5rem 24px 0 24px;
+    }
+}
+.mt-6 {
+    margin-top: 6.8rem;
+}
+.pb-2 {
+    padding-bottom: 2.5rem;
+}
+.btn-highlight {
+    background: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    color: $primaryOrange;
+    cursor: pointer;
+    margin-left: 35px;
+    font-weight: 500;
+    border: 1px solid #FF505B;
+    transition: all 0.2s;
+
+    @include respond(tablet) {
+        padding: 10px 20px;
+        margin-left: 15px;
+    }
+
+    &:hover {
+        background: #FF505B;
+        color: $white;
+        border: 1px solid $white;
+    }
+}
+.btn-no-highlight {
+    background: #FF505B;
+    border-radius: 30px;
+    padding: 10px 30px;
+    color: $white;
+    cursor: pointer;
+    margin-left: 35px;
+    font-weight: 500;
+    border: 1px solid $white;
+    transition: all 0.2s;
+
+    @include respond(tablet) {
+        padding: 10px 20px;
+        margin-left: 15px;
+    }
+
+    &:hover {
+        background: $white;
+        color: #FF505B;
+    }
+}
